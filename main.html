@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movies Review</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <h1>Movie <span>Universe</span></h1>
+      <p>Discover, review, and explore the Best of Sci-fi moveies movies</p>
+    </header>
+    <!-- navigation -->
+    <nav id="main-nav">
+      <ul>
+        <li><a href="#featured">Featured Reviews</a></li>
+        <li><a href="#submit-review">Submit a Review</a></li>
+        <li><a href="#movie-news">Movie News</a></li>
+      </ul>
+    </nav>
+    <!-- featured-reviews  -->
+    <section id="featured">
+      <h2>Featured Reviews</h2>
+      <article>
+        <img src="Assets/interstellar.jpg" alt="cover of interstellar movie. astronauts on the ocean of another planet" />
+        <div class="info">
+          <h3>interstellar (2014)</h3>
+          <p>
+            In this visually stunning epic, director Christopher Nolan takes us
+            on a journey through space and time to save humanity from
+            extinction. As Earth becomes uninhabitable, a group of astronauts
+            ventures through a wormhole in search of a new home. Interstellar
+            combines stunning visuals with deep philosophical themes about love,
+            sacrifice, and the survival of the human race. The film also
+            explores complex scientific concepts, making it an extraordinary
+            adventure and emotional rollercoaster.
+          </p>
+          <a href="review1.html">Read Full Review</a>
+          <a href="https://www.youtube.com/watch?v=zSWdZVtXT7E" target="_blank" rel="noopener noreferrer">Watch Trailer</a>
+        </div>
+      </article>
+      <article>
+        <img src="Assets/inception.jpg" alt="cover of inception movie. group of people looking at collapsing buildings" />
+        <div class="info">
+          <h3>Inception (2010)</h3>
+          <p>
+            Christopher Nolan's mind-bending thriller is an absolute masterpiece
+            that explores the depths of dreams and reality. Inception takes
+            viewers on a surreal journey where skilled thieves infiltrate
+            people’s subconscious, planting ideas that can alter their behavior.
+            The film expertly blends action with philosophical questions about
+            identity, memory, and the nature of dreams, making it a visually
+            stunning and intellectually engaging experience.
+          </p>
+          <a href="review1.html">Read Full Review</a>
+          <a href="https://youtu.be/YoHD9XEInc0?si=ZXdUj6VCBfrHJE8-" target="_blank" rel="noopener noreferrer">Watch Trailer</a>
+        </div>
+      </article>
+      <article>
+        <img src="Assets/bladerunner.jpg" alt="cover of bladerunner movie. a man and a car looking at dystopian city" />
+        <div class="info">
+          <h3>Blade Runner 2049 (2017)</h3>
+          <p>
+            Denis Villeneuve's sequel to the classic "Blade Runner" explores
+            themes of identity, humanity, and artificial intelligence in a
+            dystopian future. In this visually breathtaking film, LAPD officer K
+            uncovers a long-buried secret that could change the course of
+            society. Blade Runner 2049 dives deep into what it means to be human
+            and the blurred lines between man and machine, all while showcasing
+            stunning cinematography and a haunting soundtrack that captures the
+            film's melancholy tone.
+          </p>
+          <a href="review1.html">Read Full Review</a>
+          <a href="https://youtu.be/gCcx85zbxz4?si=GQ2W14-ffiawGb95" target="_blank" rel="noopener noreferrer">Watch Trailer</a>
+        </div>
+      </article>
+    </section>
+    <!-- form -->
+    <section id="submit-review">
+        <h2>Submit Your Review</h2>
+        <div id="submit-div">
+        <form action="/submit-review" method="POST">
+          <label for="movie-title">Movie Title</label>
+          <input
+            type="text"
+            id="movie-title"
+            name="movie-title"
+            aria-label="Movie title"
+            placeholder="Enter movie title" 
+            required
+          />
+
+          <label for="review-text">Your Review</label>
+          <textarea
+            id="review-text"
+            name="review-text"
+            rows="20"
+            aria-describedby="review-description"
+            placeholder="write review here..." 
+            required
+          ></textarea>
+
+          <button type="submit" aria-label="Submit your movie review">
+            Submit Review
+          </button>
+        </div>
+        </form>
+      </section>
+
+    <!-- news -->
+    <section id="movie-news">
+      <h2>Movie News</h2>
+      <div id="movie-div">
+        <article>
+          <img src="Assets/news1.png" alt="A girl with orange suit looking forward" />
+          <p>
+            Silo season 3: Everything we know about the upcoming return of the
+            hit Apple TV Plus sci-fi show
+          </p>
+          <p class="post-meta">
+            <time datetime="2026-12-11">December 11, 2026</time> |
+            Rick Sanchad
+          </p>
+          <a href="https://www.gamesradar.com/entertainment/sci-fi-shows/silo-season-3-release-date-cast-plot-trailer-news/" rel="noopener noreferrer" target="_blank">More</a>
+        </article>
+        <article>
+          <img src="Assets/news2.webp" alt="photo of 3 netflix newly added popular movie" />
+          <p>
+            7 new movies and TV shows to stream on Netflix, Prime Video, Max, and more this weekend (January 17)
+          </p>
+          <p class="post-meta">
+            <time datetime="2026-12-11">December 11, 2026</time> |
+            Rick Sanchad
+          </p>
+          <a href="https://www.techradar.com/streaming/7-new-movies-and-tv-shows-to-stream-on-netflix-prime-video-max-and-more-this-weekend-january-17"  rel="noopener noreferrer"target="_blank">More</a>
+        </article>
+        <article>
+          <img src="Assets/news3.png" alt="two pirate holding hostage to a man" />
+          <p>
+            4 new Prime Video movies with over 90% on Rotten Tomatoes that I recommend watching
+          </p>
+          <p class="post-meta">
+            <time datetime="2026-12-11">December 11, 2024</time> |
+            Grace Morris
+          </p>
+          <a href="https://www.techradar.com/streaming/amazon-prime-video/4-new-prime-video-movies-with-over-90-percent-on-rotten-tomatoes-id-watch-this-month" rel="noopener noreferrer" target="_blank">More</a>
+        </article>
+      </div>
+    </section>
+
+    <!-- footer -->
+     <footer>
+        <p>&copy; Movie Universe</p>
+        <ul>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://reddit.com" target="_blank" rel="noopener noreferrer">Reddit</a></li>
+        </ul>
+     </footer>
+  </body>
+</html>
