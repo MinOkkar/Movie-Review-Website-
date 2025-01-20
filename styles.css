@@ -1,9 +1,14 @@
 :root {
+  --background-color: rgb(138, 43, 226);
+  --pure-white: rgb(255, 255, 255);
+  --pure-black: rgb(0, 0, 0);
+  --background-transparent-color: rgba(153, 0, 255, 0.253);
+  --background-gray: rgba(105, 105, 105, 0.753);
 }
 body {
   display: grid;
-  background-color: black;
-  color: white;
+  background-color: var(--pure-black);
+  color: var(--pure-white);
   font-family: "Courier New", Courier, monospace;
 }
 /* header */
@@ -13,20 +18,20 @@ header {
   display: flex;
   align-items: center;
   gap: 500px;
-  color: white;
-  border-bottom: solid white 0.5px;
+  color: var(--pure-white);
+  border-bottom: solid var(--pure-white) 0.5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h1 {
   font-size: 3rem;
-  background-color: white;
+  background-color: var(--pure-white);
   padding: 10px 0px;
   padding-left: 10px;
-  color: black;
+  color: var(--pure-black);
 }
 h1 span {
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--pure-white);
   padding: 10px;
 }
 h2 {
@@ -51,7 +56,7 @@ header p::after {
   justify-content: center;
   align-items: center;
   gap: 20px;
-  background-color: rgba(153, 0, 255, 0.253);
+  background-color: var(--background-transparent-color);
   backdrop-filter: blur(10px);
   margin: 0px;
   padding: 30px;
@@ -61,13 +66,13 @@ header p::after {
 
 #main-nav ul a {
   text-decoration: none;
-  color: white;
+  color: var(--pure-white);
   padding: 20px;
   transition: 0.3s ease-in-out;
 }
 
 #main-nav ul li:hover {
-  border-bottom: blueviolet solid 0.5px;
+  border-bottom: var(--background-color) solid 0.5px;
 }
 
 /* featured */
@@ -84,7 +89,7 @@ header p::after {
   flex-direction: row;
   margin: 50px;
   padding: 100px;
-  background-color: rgba(255, 255, 255, 0.144);
+  background-color: var(--background-gray);
 }
 #featured img {
   max-width: 500px;
@@ -92,7 +97,7 @@ header p::after {
 .info {
   text-align: center;
   align-content: center/top;
-  background-color: rgba(153, 0, 255, 0.253);
+  background-color: var(--background-transparent-color);
   padding: 20px;
 }
 
@@ -102,8 +107,8 @@ header p::after {
 
 .info a {
   text-decoration: none;
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--pure-white);
   padding: 10px;
   transition: 0.3s ease-in-out;
 }
@@ -136,13 +141,13 @@ form {
 }
 #submit-div input,
 #submit-div textarea {
-  background-color: rgba(153, 0, 255, 0.253);
+  background-color: var(--background-transparent-color);
   border: none;
-  color: white;
+  color: var(--pure-white);
 }
 #submit-review button {
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--pure-white);
   height: 30px;
   transition: 0.3s ease-in-out;
 }
@@ -166,16 +171,16 @@ form {
   max-width: 500px;
 }
 #movie-div article {
-  border: white 0.5px solid;
+  border: var(--pure-white) 0.5px solid;
   padding: 50px;
 }
 .post-meta {
-  color: rgba(153, 0, 255, 0.836);
+  color: var(--background-transparent-color);
 }
 #movie-div a {
   text-decoration: none;
-  background-color: blueviolet;
-  color: white;
+  background-color: var(--background-color);
+  color: var(--pure-white);
   padding: 10px;
   transition: 0.3s ease-in-out;
 }
@@ -198,13 +203,13 @@ footer ul {
 }
 footer a {
   text-decoration: none;
-  color: white;
+  color: var(--pure-white);
   margin: 20px;
   width: 50px;
 }
 
 footer a:hover {
-  border-bottom: solid blueviolet 0.5px;
+  border-bottom: solid var(--background-color) 0.5px;
 }
 
 @media screen and (max-width: 1000px) {
@@ -212,7 +217,7 @@ footer a:hover {
     display: none;
   }
   #main-nav a {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   #featured article {
     flex-direction: column;
