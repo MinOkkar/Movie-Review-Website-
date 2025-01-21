@@ -6,6 +6,9 @@
   --background-gray: rgba(105, 105, 105, 0.753);
   --triggered-btn: rgb(255, 0, 0);
 }
+html {
+  scroll-behavior: smooth;
+}
 body {
   display: grid;
   background-color: var(--pure-black);
@@ -33,13 +36,13 @@ h1 {
 }
 @keyframes headershadow {
   0% {
-    border: solid 5px var(--background-color);
+    border: solid 2px var(--background-color);
   }
   50% {
-    border: solid 5px var(--pure-white);
+    border: solid 2px var(--pure-white);
   }
   100% {
-    border: solid 5px var(--background-color);
+    border: solid 2px var(--background-color);
   }
 }
 
@@ -123,15 +126,46 @@ header p::after {
   flex-direction: column;
   align-items: center;
 }
+
 #featured article {
   display: flex;
   flex-direction: row;
   margin: 50px;
   padding: 100px;
-  background-color: var(--background-gray);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  animation: headershadow 5s infinite;
 }
+
+.featured-article:nth-child(2) {
+  background-image: url(Assets/Interstellar.gif);
+}
+.featured-article:nth-child(3) {
+  background-image: url(Assets/inception.gif);
+}
+.featured-article:nth-child(4) {
+  background-image: url(Assets/bladerunner.gif);
+}
+
 #featured img {
   max-width: 500px;
+  transition: 0.3s ease-in-out;
+}
+#featured img:hover {
+  transform: scale(1.01);
+  animation: img-hover 5s infinite;
+}
+@keyframes img-hover {
+  0% {
+    box-shadow: 20px 10px 10px var(--background-transparent-color);
+  }
+  50% {
+    box-shadow: 20px 10px 10px var(--pure-black);
+  }
+  100% {
+    box-shadow: 20px 10px 10px var(--background-transparent-color);
+  }
 }
 .info {
   text-align: center;
