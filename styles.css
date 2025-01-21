@@ -8,6 +8,7 @@
 }
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   display: grid;
@@ -21,9 +22,7 @@ header {
   justify-content: space-between;
   display: flex;
   align-items: center;
-  gap: 500px;
   color: var(--pure-white);
-  border-bottom: solid var(--pure-white) 0.5px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 h1 {
@@ -32,7 +31,7 @@ h1 {
   padding: 10px 0px;
   padding-left: 10px;
   color: var(--pure-black);
-  animation: headershadow 2s infinite;
+  animation: headershadow 5s infinite;
 }
 @keyframes headershadow {
   0% {
@@ -67,7 +66,9 @@ h2 {
     text-shadow: 2px 5px 10px var(--background-color);
   }
 }
-
+header p {
+  margin-left: 10px;
+}
 header p::before {
   content: " 🟪";
 }
@@ -80,6 +81,8 @@ header p::after {
   position: sticky;
   top: 0;
   left: 0;
+  animation: headershadow 5s infinite;
+  z-index: 2;
 }
 #main-nav ul {
   display: flex;
@@ -117,6 +120,12 @@ header p::after {
   }
 }
 
+/*   scroll margin */
+#featured,
+#submit-review,
+#movie-news {
+  scroll-margin-top: 100px;
+}
 /* featured */
 #featured h2 {
   margin-bottom: 0px;
@@ -136,8 +145,21 @@ header p::after {
   background-repeat: no-repeat;
   background-position: center;
   animation: headershadow 5s infinite;
+  position: relative;
+  z-index: 1;
 }
 
+#featured .featured-article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.1);
+  z-index: -1;
+}
 .featured-article:nth-child(2) {
   background-image: url(Assets/Interstellar.gif);
 }
@@ -248,7 +270,7 @@ form {
   padding: 50px;
 }
 .post-meta {
-  color: var(--background-transparent-color);
+  color: var(--background-gray);
 }
 #movie-div a {
   text-decoration: none;
@@ -298,5 +320,10 @@ footer a:hover {
   }
   #movie-div {
     flex-direction: column;
+  }
+  .info a {
+    display: flex;
+    justify-self: center;
+    margin: 10px;
   }
 }
